@@ -1,10 +1,10 @@
-# Prozees
+# Prozess
 
-**Prozees** is a Python library designed to help automate the repetitive tasks involved in setting up new projects. It simplifies the setup process and lets you focus more on writing code and less on configuring your environment.
+**Prozess** is a Python library designed to help automate the repetitive tasks involved in setting up new projects. It simplifies the setup process and lets you focus more on writing code and less on configuring your environment.
 
-## What Does Prozees Do?
+## What Does prozess Do?
 
-Prozees streamlines common project setup tasks such as:
+Prozess streamlines common project setup tasks such as:
 
 - Creating virtual environments (venvs)
 - Installing required packages
@@ -12,9 +12,9 @@ Prozees streamlines common project setup tasks such as:
 - Configuring Docker environments
 - Running initial tests
 
-## Why Use Prozees?
+## Why Use Prozess?
 
-Setting up a new project can be time-consuming, especially if you repeatedly do the same setup tasks. **Prozees** saves you time by automating the most common setup processes, allowing you to start coding right away.
+Setting up a new project can be time-consuming, especially if you repeatedly do the same setup tasks. **Prozess** saves you time by automating the most common setup processes, allowing you to start coding right away.
 
 ## Features
 
@@ -26,10 +26,10 @@ Setting up a new project can be time-consuming, especially if you repeatedly do 
 
 ## Installation
 
-You can install **Prozees** with pip:
+You can install **Prozess** with pip:
 
 ```bash
-pip install prozees
+pip install prozess
 ```
 
 ## How to Use
