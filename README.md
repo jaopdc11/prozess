@@ -2,7 +2,7 @@
 
 **Prozess** is a Python library designed to help automate the repetitive tasks involved in setting up new projects. It simplifies the setup process and lets you focus more on writing code and less on configuring your environment.
 
-## What Does prozess Do?
+## What Does Prozess Do?
 
 Prozess streamlines common project setup tasks such as:
 
