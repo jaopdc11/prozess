@@ -3,16 +3,33 @@ name: Create Release on Tag
 on:
   push:
     tags:
-      - 'v**'
+      - 'v*'
+      - 'v*-*'
 
 jobs:
   create-release:
+    name: Create GitHub Release
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v2
 
+      - name: Get current branch from tag
+        id: get_branch
+        run: |
+          TAG_SHA=$(git rev-list -n 1 ${{ github.ref }})
+          BRANCH=$(git branch -r --contains $TAG_SHA | grep -E 'origin/(main|develop)' | head -n1 | sed 's|origin/||')
+          echo "branch=$BRANCH" >> $GITHUB_OUTPUT
+
+      - name: Fail if tag is not on develop or main
+        if: steps.get_branch.outputs.branch == ''
+        run: |
+          echo "❌ Tag ${{ github.ref }} não está em develop nem em main. Release não será criada."
+          exit 1
+
       - name: Create Release
+        if: steps.get_branch.outputs.branch != ''
         uses: softprops/action-gh-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
